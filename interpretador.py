@@ -11,7 +11,7 @@ class HttpProtocol:
     cabecalho: dict
 
 def show_header(protocolo):
-    print("----------     INTERPRETADOR PROTOCOLO HTTP         ----------")
+    print("----------        INTERPRETADOR PROTOCOLO HTTP         ----------")
     print("Tipo do protocolo: {}".format(protocolo.tipo))
     if protocolo.tipo == "Requisição":
         print("Método: {}\nURL: {}\nVersão: {}".format(protocolo.metodo, protocolo.url, protocolo.versao))
@@ -19,7 +19,7 @@ def show_header(protocolo):
         print("Versão: {}\nStatus: {} - {}".format(protocolo.versao, protocolo.status_code, protocolo.status_name))
 
 def show_cabecalho(protocolo):
-    print("\n--------------------     CABEÇALHO    -------------------")
+    print("\n--------------------       CABEÇALHO    -------------------")
     for atributo_cabecalho in protocolo.cabecalho.keys():
         print("{} = {}".format(atributo_cabecalho, protocolo.cabecalho.get(atributo_cabecalho)))
 
